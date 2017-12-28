@@ -27,7 +27,7 @@ public class MovieListPresenter implements MovieListContract.Presenter {
 
     private MoviesApi mMovesApi;
 
-    private static int mCurrentPage = 1;
+    private int mCurrentPage = 1;
 
     @Inject
     public MovieListPresenter(MoviesApi moviesApi) {

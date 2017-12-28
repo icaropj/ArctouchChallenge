@@ -53,6 +53,11 @@ public class MovieAdapter extends BaseAdapter<Movie> implements Filterable{
     }
 
     @Override
+    public Movie get(int position) {
+        return dataListFiltered.get(position);
+    }
+
+    @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(mContext).inflate(R.layout.item_movie, parent, false);
         MovieViewHolder holder = new MovieViewHolder(view);
@@ -141,7 +146,7 @@ public class MovieAdapter extends BaseAdapter<Movie> implements Filterable{
 
         @Override
         public void onClick(View v) {
-            if(mListener != null) mListener.onMovieClick(dataList.get(getAdapterPosition()));
+            if(mListener != null) mListener.onMovieClick(dataListFiltered.get(getAdapterPosition()));
         }
     }
 

@@ -71,7 +71,7 @@ public class MovieActivity extends BaseActivity {
 
         Picasso.with(MovieActivity.this)
                 .load(Constants.LARGE_IMAGE_PATH + mMovie.getPosterPath())
-                .resize(300, 300)
+                .resize(500, 500)
                 .into(mIvPoster);
 
         mTvName.setText(mMovie.getTitle());
